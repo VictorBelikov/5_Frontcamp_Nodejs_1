@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:newsId', (req, res) => {
-  newsController.getSpecificNews(+req.params.newsId)
+  newsController.getSpecificNews(+req.params.newsId, req.method.toLowerCase())
     .then((news) => {
       if (news) {
         res.status(200).json(news);
@@ -29,15 +29,28 @@ router.post('/', (req, res) => {
   };
 
   newsController.saveNews(newNews).then(() => {
-    res.status(201).json({
-      message: 'News saved in DB',
-    });
+    res.status(201).json({ message: 'News saved in DB' });
   })
     .catch((err) => res.status(500).json({ error: err }));
 });
 
 router.put('/:newsId', (req, res) => {});
 
-router.delete('/:newsId', (req, res) => {});
+router.delete('/:newsId', (req, res) => {
+  newsController.getSpecificNews(+req.params.newsId, req.method.toLowerCase())
+    .then((index) => {
+      if (index >= 0) {
+        return newsController.delSpecificNews(index);
+      }
+      return 'not found';
+    })
+    .then((result) => {
+      if (result === 'not found') {
+        return res.status(404).json({ message: 'Specific news not found in DB' });
+      }
+      res.status(200).json({ message: 'Specific news was deleted from DB' });
+    })
+    .catch((err) => res.status(500).json({ error: err }));
+});
 
 module.exports = router;

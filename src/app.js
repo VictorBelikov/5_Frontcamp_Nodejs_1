@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
 const logger = require('./api/middleware/logger');
+const globaErrHandler = require('./api/middleware/errorHandler');
 
 const newsRoutes = require('./api/routes/news');
 
@@ -13,8 +13,8 @@ app.use(morgan('dev'));
 // app.use(logger);
 
 // We can use req.body... & etc.
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use('/news', newsRoutes);
 
@@ -27,10 +27,6 @@ app.use((req, res, next) => {
 });
 
 // Will catch all errors in the app.
-app.use((err, req, res, next) => {
-  console.log('!! In the error processing callback !!:\n', err);
-  res.status(err.status || 500);
-  res.json({ error: { message: err.message } });
-});
+app.use(globaErrHandler);
 
 module.exports = app;

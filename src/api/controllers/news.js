@@ -10,18 +10,44 @@ const getAllNews = () => readFile(pathToNews)
   .then((allNews) => JSON.parse(allNews))
   .catch((err) => console.log(`Read file error: ${err}`));
 
-const getSpecificNews = (id) => getAllNews()
-  .then((allNewsJson) => allNewsJson.find((news) => news.id === id));
-
-const saveAllNews = (news) => writeFile(pathToNews, JSON.stringify(news));
-
-const saveNews = (news) =>
-  getAllNews().then((newsJson) => {
-    const newId = newsJson[newsJson.length - 1].id + 1;
-    // const newNews = Object.assign({}, news, { id: newId });
-    const newNews = { ...news, id: newId };
-    return saveAllNews(newsJson.concat(newNews));
+const getSpecificNews = (id, method) => getAllNews()
+  .then((allNewsJson) => {
+    if (method === 'get') {
+      return allNewsJson.find((news) => news.id === id);
+    }
+    if (method === 'delete') {
+      return allNewsJson.findIndex((news) => news.id === id);
+    }
   });
 
+const saveAllNews = (allNews) => writeFile(pathToNews, JSON.stringify(allNews));
 
-module.exports = { getAllNews, saveNews, getSpecificNews };
+const saveNews = (news) =>
+  getAllNews()
+    .then((allNewsJson) => {
+      const newId = allNewsJson[allNewsJson.length - 1].id + 1;
+      // const newNews = Object.assign({}, news, { id: newId });
+      const newNews = {
+        ...news,
+        id: newId,
+      };
+      return saveAllNews(allNewsJson.concat(newNews));
+    });
+
+const delSpecificNews = (index) => {
+  getAllNews()
+    .then((allNewsJson) => {
+      const allTheNews = [...allNewsJson];
+      allTheNews.splice(index, 1);
+      return saveAllNews(allTheNews);
+    })
+    .catch((err) => console.log(`Read file error: ${err}`));
+};
+
+
+module.exports = {
+  getAllNews,
+  saveNews,
+  getSpecificNews,
+  delSpecificNews,
+};
