@@ -1,6 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
-const logger = require('./api/middleware/logger');
+const fileLogger = require('./api/middleware/fileLogger');
 const globaErrHandler = require('./api/middleware/errorHandler');
 
 const newsRoutes = require('./api/routes/news');
@@ -9,8 +9,9 @@ const app = express();
 
 // Logs request params to the console, then always calls next().
 app.use(morgan('dev'));
-// Or we can use our custom logger.
-// app.use(logger);
+
+// Our custom filelogger.
+app.use(fileLogger);
 
 // We can use req.body... & etc.
 app.use(express.urlencoded({ extended: true }));
