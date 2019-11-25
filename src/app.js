@@ -7,6 +7,9 @@ const newsRoutes = require('./api/routes/news');
 
 const app = express();
 
+app.set('view engine', 'ejs'); // our template engine
+app.set('views', 'src/api/views'); // where our views are stored
+
 // Logs request params to the console, then always calls next().
 app.use(morgan('dev'));
 

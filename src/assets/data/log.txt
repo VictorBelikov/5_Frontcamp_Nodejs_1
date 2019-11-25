@@ -46,3 +46,39 @@
 7:49:39 2019-11-25: req.method => PUT / req.url => http://localhost:3000/news/6
 
 7:49:51 2019-11-25: req.method => PUT / req.url => http://localhost:3000/news/6
+
+9:34:51 2019-11-25: req.method => POST / req.url => http://localhost:3000/news/
+
+10:28:31 2019-11-25: req.method => GET / req.url => http://localhost:3000/
+
+10:31:18 2019-11-25: req.method => GET / req.url => http://localhost:3000/
+
+10:31:49 2019-11-25: req.method => GET / req.url => http://localhost:3000/
+
+10:34:30 2019-11-25: req.method => GET / req.url => http://localhost:3000/
+
+10:36:26 2019-11-25: req.method => GET / req.url => http://localhost:3000/
+
+10:38:00 2019-11-25: req.method => GET / req.url => http://localhost:3000/
+
+10:38:01 2019-11-25: req.method => GET / req.url => http://localhost:3000/
+
+10:39:31 2019-11-25: req.method => POST / req.url => http://localhost:3000/news/
+
+10:40:48 2019-11-25: req.method => GET / req.url => http://localhost:3000/
+
+10:56:55 2019-11-25: req.method => GET / req.url => http://localhost:3000/
+
+10:57:52 2019-11-25: req.method => GET / req.url => http://localhost:3000/
+
+10:59:09 2019-11-25: req.method => GET / req.url => http://localhost:3000/news
+
+10:59:20 2019-11-25: req.method => GET / req.url => http://localhost:3000/news/1
+
+10:59:26 2019-11-25: req.method => GET / req.url => http://localhost:3000/news/14
+
+10:59:38 2019-11-25: req.method => GET / req.url => http://localhost:3000/news
+
+10:59:42 2019-11-25: req.method => GET / req.url => http://localhost:3000/new
+
+11:00:51 2019-11-25: req.method => GET / req.url => http://localhost:3000/new
