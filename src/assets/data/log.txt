@@ -28,3 +28,21 @@
 6:03:32 2019-11-25: req.method => POST / req.url => http://localhost:3000/news/
 
 6:04:35 2019-11-25: req.method => POST / req.url => http://localhost:3000/news/
+
+6:58:41 2019-11-25: req.method => PUT / req.url => http://localhost:3000/news/6
+
+6:59:27 2019-11-25: req.method => PUT / req.url => http://localhost:3000/news/6
+
+6:59:53 2019-11-25: req.method => PUT / req.url => http://localhost:3000/news/6
+
+7:00:02 2019-11-25: req.method => PUT / req.url => http://localhost:3000/news/60
+
+7:46:07 2019-11-25: req.method => PATCH / req.url => http://localhost:3000/news/60
+
+7:46:51 2019-11-25: req.method => PUT / req.url => http://localhost:3000/news/6
+
+7:48:35 2019-11-25: req.method => PUT / req.url => http://localhost:3000/news/6
+
+7:49:39 2019-11-25: req.method => PUT / req.url => http://localhost:3000/news/6
+
+7:49:51 2019-11-25: req.method => PUT / req.url => http://localhost:3000/news/6

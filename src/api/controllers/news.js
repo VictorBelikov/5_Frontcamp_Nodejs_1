@@ -15,9 +15,7 @@ const getSpecificNews = (id, method) => getAllNews()
     if (method === 'get') {
       return allNewsJson.find((news) => news.id === id);
     }
-    if (method === 'delete') {
-      return allNewsJson.findIndex((news) => news.id === id);
-    }
+    return allNewsJson.findIndex((news) => news.id === id);
   });
 
 const saveAllNews = (allNews) => writeFile(pathToNews, JSON.stringify(allNews));
@@ -26,11 +24,8 @@ const saveNews = (news) =>
   getAllNews()
     .then((allNewsJson) => {
       const newId = allNewsJson[allNewsJson.length - 1].id + 1;
-      // const newNews = Object.assign({}, news, { id: newId });
-      const newNews = {
-        ...news,
-        id: newId,
-      };
+      // const newNews = Object.assign({}, news, { id: newId }); // old way
+      const newNews = { ...news, id: newId };
       return saveAllNews(allNewsJson.concat(newNews));
     });
 
@@ -44,10 +39,21 @@ const delSpecificNews = (index) => {
     .catch((err) => console.log(`Read file error: ${err}`));
 };
 
+const updateSpecificNews = (index, news) => {
+  getAllNews()
+    .then((allNewsJson) => {
+      const allTheNews = [...allNewsJson];
+      allTheNews[index] = { ...news, id: allTheNews[index].id };
+      return saveAllNews(allTheNews);
+    })
+    .catch((err) => console.log(`Read file error: ${err}`));
+};
+
 
 module.exports = {
   getAllNews,
   saveNews,
   getSpecificNews,
   delSpecificNews,
+  updateSpecificNews,
 };
