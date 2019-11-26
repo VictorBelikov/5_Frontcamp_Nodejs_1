@@ -82,3 +82,75 @@
 10:59:42 2019-11-25: req.method => GET / req.url => http://localhost:3000/new
 
 11:00:51 2019-11-25: req.method => GET / req.url => http://localhost:3000/new
+
+5:36:10 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:36:10 2019-11-26: req.method => GET / req.url => http://localhost:3000/favicon.ico
+
+5:36:16 2019-11-26: req.method => GET / req.url => http://localhost:3000/news
+
+5:41:57 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:47:02 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:47:02 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:47:03 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:47:03 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:53:23 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:53:23 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:53:24 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:53:24 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:53:25 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:53:25 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:53:25 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:53:25 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:53:25 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:53:25 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:54:01 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:54:01 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:54:02 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:54:02 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:54:02 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:54:03 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:54:03 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:54:03 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:54:06 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+5:54:06 2019-11-26: req.method => GET / req.url => http://localhost:3000/css/main.css
+
+5:54:07 2019-11-26: req.method => GET / req.url => http://localhost:3000/favicon.ico
+
+5:55:34 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+6:04:24 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+6:04:25 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+6:04:51 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+6:05:26 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+6:06:39 2019-11-26: req.method => GET / req.url => http://localhost:3000/
+
+6:08:23 2019-11-26: req.method => GET / req.url => http://localhost:3000/
